@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+    <section id='register' style='margin-left: 15rem ;margin-right: 15rem;'>
+        <div class='container mt-5'>
+            <h2>Login</h2>
+
+
+        <form action="{% url 'dlogin' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input  autocomplete="off" class="form-control" autofocus type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <input class="btn btn-danger" type="submit" value="Login">
+        </form>
+
+        
+        </div>
+    
+    </section>
+
+{% endblock %}
